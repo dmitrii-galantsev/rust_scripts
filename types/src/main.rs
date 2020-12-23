@@ -18,8 +18,13 @@ fn main() {
     map.insert(4, 0.4);
     println!("{:?}", map);
     println!("hashmap for-loop");
-    for element in map {
+    for element in map.clone() {
         println!("    -> {:?}", element);
+    }
+
+    println!("hashmap iter");
+    for (k, v) in map.iter() {
+        println!("    -> ({:?}:{:?})", k, v);
     }
 
 }
